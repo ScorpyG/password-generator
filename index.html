@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="https://www.freeiconspng.com/uploads/related-white-star-vector-star-png-transparent-background-star-png--20.png">
+
+    <title>Password-Generator</title>
+</head>
+<body>
+    <header>Password-Generator</header> 
+    <p>
+        *Recommended password should have at least 12 characters with 
+        at least | 1 Normal-case letter | 1 Capital-case letter | 
+        Numbers | 1 Special-character (!, @, #, $, %, ^, &, *)
+    </p>
+
+    <input type="range" min="8" max="30" class="slider" id="pw-size">
+
+    <br>
+
+    <input type="checkbox" name="special-char" id="special-char-cbox">
+    <p>Include special-chracters (!, @, #, $, %, ^, &, *)</p>
+
+    <br>
+
+    <button id="generate-btn">Generate</button>
+
+    <br>
+
+    <input type="text" placeholder="Your new password" id="display-pw"></input>
+
+    <script src="index.js"></script>
+</body>
+</html>
