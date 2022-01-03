@@ -5,33 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="https://www.freeiconspng.com/uploads/related-white-star-vector-star-png-transparent-background-star-png--20.png">
+    <link rel="stylesheet" href="index.css"> <!--Styling Sheet-->
+    <link rel="icon" href="https://www.freeiconspng.com/uploads/related-white-star-vector-star-png-transparent-background-star-png--20.png"> <!--Website Icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> <!--Icons-->
 
     <title>Password-Generator</title>
 </head>
 <body>
-    <header>Password-Generator</header> 
-    <p>
-        *Recommended password should have at least 12 characters with 
-        at least | 1 Normal-case letter | 1 Capital-case letter | 
-        Numbers | 1 Special-character (!, @, #, $, %, ^, &, *)
-    </p>
+    <div class="grid">
+        <div class="static-header">
+            <h1>Random-Password-Generator</h1>
+            <p>* Recommended password should have at least 20 characters including</p>
+            <ul>
+                <li>Numbers</li>
+                <li>Normal-case letters</li>
+                <li>Capital-case letters</li>
+                <li>Special-character (! @ # $ % ^ & *)</li>
+            </ul>
+        </div>
 
-    <input type="range" min="8" max="30" class="slider" id="pw-size">
+        <div class="user-input">
+            <span>Password Length</span>
+            <input type="range" min="8" max="30" value='20' class="slider" id="pw-size">
+            <span id="input-length-value"></span>
+            <br>
+            <input type="checkbox" name="special-char" id="special-char-cbox" value=false>
+            <span>Include special-chracters (! @ # $ % ^ & *)</span>
 
-    <br>
+            <button id="generate-btn">Generate</button>
+        </div>
 
-    <input type="checkbox" name="special-char" id="special-char-cbox">
-    <p>Include special-chracters (!, @, #, $, %, ^, &, *)</p>
-
-    <br>
-
-    <button id="generate-btn">Generate</button>
-
-    <br>
-
-    <input type="text" placeholder="Your new password" id="display-pw"></input>
+        <div class="clipboard">
+            <input type="text" placeholder="Your new password" id="display-pw"></input>
+            <i class="far fa-copy" id="copy"></i>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>
