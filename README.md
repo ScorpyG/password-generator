@@ -13,6 +13,6 @@ or smart)
 - Live indicator to verify your password integrity.
 - Save the generated password on your local storage of your web-browser. 
 
-*** *IMPORTANT!! This site should only be used for demo and recommendation **ONLY!** The creator will not be held responsible for any security or privacy issues ***
+_***IMPORTANT!! This site should only be used for demo and recommendation **ONLY!** The creator will not be held responsible for any security or privacy issues**_
 
 [View Demo!](https://scorpyg.github.io/password-generator/)
