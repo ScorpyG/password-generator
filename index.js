@@ -21,7 +21,7 @@ slider.oninput = function() {
 // Function to generate the password
 const passwordGenerate = (passwordSize) => { 
     var charactersList = '0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP';
-    var specialCharsList = '~!@#$%^&*';
+    var specialCharsList = '~!@#$%^&*?';
     var charactersListLength = charactersList.length;
     var generatedPassword = '';
 

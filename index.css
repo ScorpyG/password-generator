@@ -1,102 +1,102 @@
 /* External fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
-/* Global variables */
+/* Global css values */
 :root {
-    --bgColor: #0A0A0A;
-    --ContrastColor2: #FFFFFF;
-    --ContrastColor: #00B800;
-    --HoverColor: #00FF00;
+  --bgColor: #0a0a0a;
+  --ContrastColor2: #ffffff;
+  --ContrastColor: #00b800;
+  --HoverColor: #00ff00;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-html, body {
-    background-color: var(--bgColor);
-    color: var(--ContrastColor2);
-    scroll-behavior: smooth;
-    margin: 0;
-    font-family: 'Roboto Mono', monospace;
-    display: grid;
-    place-items: center;
-    height: 100vh;
+html,
+body {
+  background-color: var(--bgColor);
+  color: var(--ContrastColor2);
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 button {
-    font-size: 18px;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    width: 40%;
-    margin: 20px auto;
-    display: block;
-    padding: 10px 5px;
-    background-color: transparent;
-    border:2px solid #00B800;
-    border-radius: 20px;
-    box-shadow: 3px 3px rgba(0, 184, 0, 0.6);
+  font-size: 18px;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  width: 40%;
+  margin: 20px auto;
+  display: block;
+  padding: 10px 5px;
+  background-color: transparent;
+  border: 2px solid #00b800;
+  border-radius: 20px;
+  box-shadow: 3px 3px rgba(0, 184, 0, 0.6);
 }
 
-button:hover{
-    
-    cursor: pointer;
-    transform: translateY(3px);
-    transform: translateX(3px);
-    box-shadow: none;
-    color: var(--bgColor);
-    border-color: var(--bgColor);
-    background-color: var(--HoverColor);
+button:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  transform: translateX(3px);
+  box-shadow: none;
+  color: var(--bgColor);
+  border-color: var(--bgColor);
+  background-color: var(--HoverColor);
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 h1 {
-    color: var(--ContrastColor);
-    text-align: center;
+  color: var(--ContrastColor);
+  text-align: center;
 }
 
 hr {
-    border: 1px solid #00B800;
+  border: 1px solid #00b800;
 }
 
 .grid {
-    margin: auto;
-    border: 2px solid #00B800;
-    box-shadow: 7px 7px rgba(0, 184, 0, 0.6);
-    border-radius: 20px;
-    width: 600px;
-    height: 500px;
-    padding: 0 30px 10px 30px;
-    line-height: 2rem;
+  margin: auto;
+  border: 2px solid #00b800;
+  box-shadow: 7px 7px rgba(0, 184, 0, 0.6);
+  border-radius: 20px;
+  width: 600px;
+  height: 500px;
+  padding: 0 30px 10px 30px;
+  line-height: 2rem;
 }
 
 #display-pw {
-    color: var(--ContrastColor2);
-    letter-spacing: 2px;
-    height: 100%;
-    width: 90%;
-    outline: none;
-    resize: none;
-    background-color: transparent;
-    border: 2px solid #00B800;
-    border-radius: 20px;
-    padding: 10px 5px 10px 15px;
+  color: var(--ContrastColor2);
+  letter-spacing: 1px;
+  height: 100%;
+  width: 90%;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  border: 2px solid #00b800;
+  border-radius: 20px;
+  padding: 10px 5px 10px 15px;
 }
 
 i {
-    cursor: pointer;
-    position: relative;
-    right: 40px;
+  cursor: pointer;
+  position: relative;
+  right: 40px;
 }
 
-i:hover {
-    color: var(--HoverColor);
+i:active {
+  color: rgb(100, 100, 100);
 }
 
 .clipboard {
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
