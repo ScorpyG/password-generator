@@ -1,13 +1,21 @@
 // DOM variables
-var slider = document.getElementById('pw-size');
-var output = document.getElementById('input-length-value');
-var generateButton = document.getElementById('generate-btn');
-var uniqueCharsCheckbox = document.getElementById('special-char-cbox');
-var pwTxtbox = document.getElementById('display-pw');
-var copyIcon = document.getElementById('copy');
+let slider = document.getElementById('pw-size');
+let output = document.getElementById('input-length-value');
+let generateButton = document.getElementById('generate-btn');
+let uniqueCharsCheckbox = document.getElementById('special-char-cbox');
+let pwTxtbox = document.getElementById('display-pw');
+let copyIcon = document.getElementById('copy');
 
-// Global variables
+let reqPwSize = document.getElementById('accept-size');
+let reqPwNum = document.getElementById('accept-num');
+let reqPwChars = document.getElementById('accept-letters');
+let reqPwCapChars = document.getElementById('accept-capital-letters');
+let reqPwUnique = document.getElementById('accept-unique-chars');
+
+// Global letiables
 let passwordLength = slider.value;
+let charactersList = '0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP';
+let specialCharsList = '~!@#$%^&*?';
 
 // Display slider (password-size) value on-load
 output.innerHTML = slider.value;
@@ -20,10 +28,8 @@ slider.oninput = function() {
 
 // Function to generate the password
 const passwordGenerate = (passwordSize) => { 
-    var charactersList = '0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP';
-    var specialCharsList = '~!@#$%^&*?';
-    var charactersListLength = charactersList.length;
-    var generatedPassword = '';
+    let charactersListLength = charactersList.length;
+    let generatedPassword = '';
 
     // Checking if user wants special characters in their password
     if (uniqueCharsCheckbox.checked) {
@@ -32,7 +38,7 @@ const passwordGenerate = (passwordSize) => {
     }
 
     // Create an string that match (conditions and size) of user's interests
-    for(var index = 0; index < passwordSize; index++) {
+    for(let index = 0; index < passwordSize; index++) {
         generatedPassword += charactersList.charAt(Math.floor(Math.random() * charactersListLength));
     }
 
@@ -57,9 +63,32 @@ const copyToClipboard = () => {
         pwTxtbox.value = null;
         pwTxtbox.placeholder = 'Copy to clipboard!';
     }
+};
 
+// Password integrity checker
+const pwStrenghtCheck = () => {
+    let currentPassword = pwTxtbox.value;
+
+    // Check the current password length meet the minimum requirement
+    if (currentPassword.length >= 20) {
+        reqPwSize.classList.add('good-pw');
+        reqPwSize.classList.remove('bad-pw');
+    }
+    else {
+        reqPwSize.classList.add('bad-pw');
+        reqPwSize.classList.remove('good-pw');
+    }
+
+    // Check for 
+    for (let index = 0; index < currentPassword.length; index++) {
+        if (!currentPassword[index].includes(charactersList)) {
+            console.log('yes number');
+        }
+    }
 }
 
+
 // Events listeners 
+pwTxtbox.addEventListener('keyup', pwStrenghtCheck);
 generateButton.addEventListener('click', displayGeneratedPassword);
 copyIcon.addEventListener('click', copyToClipboard);

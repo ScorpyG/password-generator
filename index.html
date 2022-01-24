@@ -17,16 +17,17 @@
             <h1>Random-Password-Generator</h1>
             <p>* Recommended password should have at least 20 characters including</p>
             <ul>
-                <li>Numbers</li>
-                <li>Normal-case letters</li>
-                <li>Capital-case letters</li>
-                <li>Special-character (~ ! @ # $ % ^ & * ?)</li>
+                <li id="accept-size">Minimum Length (20)</li>
+                <li id="accept-num">Numbers</li>
+                <li id="accept-letters">Normal-case letters</li>
+                <li id="accept-capital-letters">Capital-case letters</li>
+                <li id="accept-unique-chars">Special-character (~ ! @ # $ % ^ & * ?)</li>
             </ul>
         </div>
 
         <div class="user-input">
             <span>Password Length</span>
-            <input type="range" min="8" max="30" value='20' class="slider" id="pw-size">
+            <input type="range" min="8" max="50" value='20' class="slider" id="pw-size">
             <span id="input-length-value"></span>
             <br>
             <input type="checkbox" name="special-char" id="special-char-cbox" value=false>
