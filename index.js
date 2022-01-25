@@ -79,14 +79,15 @@ const pwStrenghtCheck = () => {
         reqPwSize.classList.remove('good-pw');
     }
 
-    // Check for 
-    for (let index = 0; index < currentPassword.length; index++) {
-        if (!currentPassword[index].includes(charactersList)) {
-            console.log('yes number');
-        }
-    }
+    // if (!isNaN(currentPassword.charAt(currentPassword.length - 1) * 1)) {
+    //     reqPwNum.classList.add('good-pw');
+    //     reqPwNum.classList.remove('bad-pw');
+    // }
+    // else {
+    //     reqPwNum.classList.add('bad-pw');
+    //     reqPwNum.classList.remove('good-pw');
+    // }
 }
-
 
 // Events listeners 
 pwTxtbox.addEventListener('keyup', pwStrenghtCheck);

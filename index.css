@@ -13,6 +13,66 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+  color: var(--ContrastColor2);
+}
+
+b {
+  color: red;
+}
+
+/* Nav button */
+.nav-btn {
+  left: 10px;
+  top: 40%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+
+  background-color: var(--bgColor);
+  border: 2px var(--ContrastColor2) solid;
+  border-radius: 50px;
+
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.nav-btn:before {
+  display: grid;
+  justify-content: center;
+  width: 100px;
+  align-self: center;
+  font-size: 1rem;
+  position: absolute;
+  visibility: hidden;
+  color: var(--bgColor);
+  z-index: -1;
+  transition-duration: 0.5s;
+}
+
+.nav-btn:hover {
+  color: var(--ContrastColor2);
+  background-color: var(--bgColor);
+  border-color: var(--ContrastColor2);
+}
+
+.nav-btn:hover::before {
+  transform: translateX(100%);
+  overflow: visible;
+  visibility: visible;
+  color: var(--hoverColor);
+}
+
+.bt1::before {
+  content: "New Password";
+}
+.bt2::before {
+  content: "Learn more";
+}
+
 html,
 body {
   background-color: var(--bgColor);
@@ -69,9 +129,16 @@ hr {
   box-shadow: 7px 7px rgba(0, 184, 0, 0.6);
   border-radius: 20px;
   width: 600px;
-  height: 540px;
+  /* height: 570px; */
   padding: 0 30px 10px 30px;
   line-height: 2rem;
+}
+
+.advices {
+  margin-top: 10px;
+  border-top: 2px solid white;
+  height: 400px;
+  overflow-y: scroll;
 }
 
 #display-pw {
@@ -87,27 +154,27 @@ hr {
   padding: 10px 5px 10px 15px;
 }
 
-i {
+.clipboard i {
   cursor: pointer;
   position: relative;
   right: 40px;
 }
 
-i:active {
+.clipboard i:active {
   color: rgb(100, 100, 100);
 }
 
 .clipboard {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 0px auto;
 }
 
 .good-pw {
-  color: green;
-  filter: brightness(80%);
+  /* color: green; */
+  filter: brightness(100%);
 }
 
 .bad-pw {
-  color: red;
-  filter: brightness(100%);
+  /* color: red; */
+  filter: brightness(50%);
 }
