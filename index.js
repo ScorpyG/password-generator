@@ -12,7 +12,7 @@ let reqPwChars = document.getElementById("accept-letters");
 let reqPwCapChars = document.getElementById("accept-capital-letters");
 let reqPwUnique = document.getElementById("accept-unique-chars");
 
-// Global letiables
+// Global variables
 let passwordLength = slider.value;
 let charactersList = "0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP";
 let specialCharsList = "~!@#$%^&*?";
@@ -67,7 +67,7 @@ const copyToClipboard = () => {
 
 // Password integrity checker
 const pwChecker = () => {
-  // Regex to user' inputs validation
+  // Regex for user' inputs validation
   let charsList = /([a-z])/;
   let capCharsList = /([A-Z])/;
   let numsList = /([0-9])/;
