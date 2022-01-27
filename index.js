@@ -28,19 +28,19 @@ slider.oninput = function () {
 
 // Function to generate the password
 const passwordGenerate = (passwordSize) => {
-  let charactersListLength = charactersList.length;
   let generatedPassword = "";
 
   // Checking if user wants special characters in their password
   if (uniqueCharsCheckbox.checked) {
     charactersList += specialCharsList;
-    charactersListLength = charactersList.length;
+  } else {
+    charactersList = "0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP";
   }
 
   // Create an string that match (conditions and size) of user's interests
   for (let index = 0; index < passwordSize; index++) {
     generatedPassword += charactersList.charAt(
-      Math.floor(Math.random() * charactersListLength)
+      Math.floor(Math.random() * charactersList.length)
     );
   }
 
