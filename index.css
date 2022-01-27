@@ -61,13 +61,14 @@ b {
 
 .nav-btn:hover::before {
   transform: translateX(-100%);
+  z-index: 0;
   overflow: visible;
   visibility: visible;
   color: var(--hoverColor);
 }
 
 .bt1::before {
-  content: "New Password";
+  content: "Generate Password";
 }
 .bt2::before {
   content: "Learn more";
@@ -132,6 +133,7 @@ hr {
   height: 570px;
   padding: 0 30px 10px 30px;
   line-height: 2rem;
+  background-color: transparent;
 }
 
 .advices {
