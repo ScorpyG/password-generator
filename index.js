@@ -66,8 +66,9 @@ const copyToClipboard = () => {
 };
 
 // Password integrity checker
-const pwStrenghtCheck = () => {
+const pwChecker = () => {
     let currentPassword = pwTxtbox.value;
+    console.log(currentPassword);
 
     // Check the current password length meet the minimum requirement
     if (currentPassword.length >= 20) {
@@ -79,17 +80,12 @@ const pwStrenghtCheck = () => {
         reqPwSize.classList.remove('good-pw');
     }
 
-    // if (!isNaN(currentPassword.charAt(currentPassword.length - 1) * 1)) {
-    //     reqPwNum.classList.add('good-pw');
-    //     reqPwNum.classList.remove('bad-pw');
-    // }
-    // else {
-    //     reqPwNum.classList.add('bad-pw');
-    //     reqPwNum.classList.remove('good-pw');
-    // }
 }
 
+// console.log('hello world'.includes('e'));
+
 // Events listeners 
-pwTxtbox.addEventListener('keyup', pwStrenghtCheck);
+pwTxtbox.addEventListener('change', pwChecker);
+pwTxtbox.addEventListener('keyup', pwChecker)
 generateButton.addEventListener('click', displayGeneratedPassword);
 copyIcon.addEventListener('click', copyToClipboard);

@@ -24,8 +24,8 @@ b {
 
 /* Nav button */
 .nav-btn {
-  left: 10px;
-  top: 40%;
+  right: 10px;
+  top: 10px;
   display: grid;
   place-items: center;
   position: absolute;
@@ -60,7 +60,7 @@ b {
 }
 
 .nav-btn:hover::before {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   overflow: visible;
   visibility: visible;
   color: var(--hoverColor);
@@ -86,11 +86,11 @@ body {
 }
 
 button {
-  font-size: 18px;
+  font-size: 1.3rem;
   color: white;
   font-family: "Roboto Mono", monospace;
   width: 40%;
-  margin: 20px auto;
+  margin: 30px auto;
   display: block;
   padding: 10px 5px;
   background-color: transparent;
@@ -129,7 +129,7 @@ hr {
   box-shadow: 7px 7px rgba(0, 184, 0, 0.6);
   border-radius: 20px;
   width: 600px;
-  /* height: 570px; */
+  height: 570px;
   padding: 0 30px 10px 30px;
   line-height: 2rem;
 }
@@ -177,4 +177,8 @@ hr {
 .bad-pw {
   /* color: red; */
   filter: brightness(50%);
+}
+
+@media screen and (max-width: 650px) {
+
 }
