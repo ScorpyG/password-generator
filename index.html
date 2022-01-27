@@ -12,21 +12,26 @@
     <title>Password-Generator</title>
 </head>
 <body>
+    <a href="docs.html" class="nav-btn bt2">
+        <i class="fas fa-paperclip"></i>
+    </a>
+
     <div class="grid">
         <div class="static-header">
-            <h1>Random-Password-Generator</h1>
+            <h1>Random Password Generator</h1>
             <p>* Recommended password should have at least 20 characters including</p>
             <ul>
-                <li>Numbers</li>
-                <li>Normal-case letters</li>
-                <li>Capital-case letters</li>
-                <li>Special-character (~ ! @ # $ % ^ & * ?)</li>
+                <li id="accept-size" class="bad-pw">Minimum Length (20)</li>
+                <li id="accept-num" class="bad-pw">Number</li>
+                <li id="accept-letters" class="bad-pw">Normal-case letter</li>
+                <li id="accept-capital-letters" class="bad-pw">Capital-case letter</li>
+                <li id="accept-unique-chars" class="bad-pw">Special-character (~ ! @ # $ % ^ & * ?)</li>
             </ul>
         </div>
 
         <div class="user-input">
             <span>Password Length</span>
-            <input type="range" min="8" max="30" value='20' class="slider" id="pw-size">
+            <input type="range" min="8" max="50" value='20' class="slider" id="pw-size">
             <span id="input-length-value"></span>
             <br>
             <input type="checkbox" name="special-char" id="special-char-cbox" value=false>
