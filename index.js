@@ -1,4 +1,4 @@
-// DOM variables
+// DOM elements
 let slider = document.getElementById("pw-size");
 let output = document.getElementById("input-length-value");
 let generateButton = document.getElementById("generate-btn");
@@ -26,7 +26,11 @@ slider.oninput = function () {
   passwordLength = this.value;
 };
 
-// Function to generate the password
+/**
+ * Function to generate the "random" password based selected requirements
+ * @param {number} passwordSize
+ * @return {string} generatedPassword 
+*/
 const passwordGenerate = (passwordSize) => {
   let generatedPassword = "";
 
